@@ -1,0 +1,10 @@
+<h3><%=@list_letters%></h3>
+
+<form action="/score" method="post">
+  <%= hidden_field_tag :list_letters, @list_letters%>
+  <%= hidden_field_tag :answer, @answer%>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="answer" placeholder="please write the biggest word you can...">
+  <input type="submit">
+</form>
+
